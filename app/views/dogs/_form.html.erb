@@ -3,11 +3,13 @@
 
   <div class="form-inputs">
     <%= f.input :name %>
+    <%# TODO: fix date range  %>
     <%= f.input :dob %>
     <%= f.association :breed %>
     <%= f.input :med_conditions %>
-    <%= f.association :vet %>
+    <%= f.association :vet, collection: Vet.order(:doctor), label_method: :vet_clinic %>
     <%= f.input :daycare_resident %>
+    <%# TODO: add owner association  %>
   </div>
 
   <div class="form-actions">
