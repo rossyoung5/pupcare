@@ -2,11 +2,11 @@
 
 <h1>Listing Dogs</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Name</th>
-      <th>Dob</th>
+      <th>Age</th>
       <th>Breed</th>
       <th>Med conditions</th>
       <th>Vet</th>
@@ -19,10 +19,10 @@
     <% @dogs.each do |dog| %>
       <tr>
         <td><%= dog.name %></td>
-        <td><%= dog.dob %></td>
-        <td><%= dog.breed %></td>
+        <td><%= dog.age %></td>
+        <td><%= dog.breed.name %></td>
         <td><%= dog.med_conditions %></td>
-        <td><%= dog.vet %></td>
+        <td><%= dog.vet.doctor %></td>
         <td><%= dog.daycare_resident %></td>
         <td><%= link_to 'Show', dog %></td>
         <td><%= link_to 'Edit', edit_dog_path(dog) %></td>
